@@ -30,6 +30,7 @@ function FCplusMinusBtn(id, plusMinus) {
     } else {
       document.getElementById("first-class-input").value = CurrentNumberUpdate;
     }
+    calculation();
   });
 }
 
@@ -51,5 +52,18 @@ function ECplusMinusBtn(id, plusMinus) {
       document.getElementById("economy-class-input").value =
         CurrentNumberUpdate;
     }
+    calculation();
   });
+}
+
+function calculation() {
+  const subCalculation =
+    parseFloat(document.getElementById("first-class-input").value * 150) +
+    parseFloat(document.getElementById("economy-class-input").value * 100);
+  console.log(subCalculation);
+
+  document.getElementById("subtotal").innerText = subCalculation;
+  const taxCalculation = (document.getElementById("tax").innerText =
+    (10 * subCalculation) / 100);
+  document.getElementById("total").innerText = taxCalculation + subCalculation;
 }
