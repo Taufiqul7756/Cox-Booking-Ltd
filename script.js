@@ -67,3 +67,17 @@ function calculation() {
     (10 * subCalculation) / 100);
   document.getElementById("total").innerText = taxCalculation + subCalculation;
 }
+
+// function bookNowFunction() {
+
+// }
+const clickedBookNowBtn = document.getElementById("bookNowBtn");
+console.log(clickedBookNowBtn);
+clickedBookNowBtn.addEventListener("click", function () {
+  const firstClassInput = document.getElementById("first-class-input").value;
+  console.log(firstClassInput);
+  document.getElementById("first-input-show").innerText = firstClassInput;
+
+  document.querySelector(".booking-form").style.display = "none";
+  document.querySelector("#testH2").style.display = "block";
+});

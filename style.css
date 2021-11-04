@@ -123,3 +123,10 @@ a.active {
   display: flex;
   justify-content: space-between;
 }
+
+/* My CSS */
+
+#testH2 {
+  display: none;
+  color: #f3f5ff;
+}
