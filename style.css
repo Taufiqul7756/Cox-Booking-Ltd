@@ -148,7 +148,6 @@ a.active {
 
 /* My CSS */
 
-#testH2 {
-  display: none;
-  color: #f3f5ff;
+.invoiceForm {
+  text-align: center;
 }
