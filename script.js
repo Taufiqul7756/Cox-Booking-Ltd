@@ -1,21 +1,5 @@
-// const firstClassPlusBtn = document.getElementById("f-plus-btn");
-// firstClassPlusBtn.addEventListener("click", function () {
-//   const firstClassInputGet = document.getElementById("first-class-input").value;
-//   const currentInput = parseFloat(firstClassInputGet);
-//   const CurrentNumberUpdate = parseFloat(currentInput + 1);
-//   document.getElementById("first-class-input").value = CurrentNumberUpdate;
-// });
-
 FCplusMinusBtn("fPlusBtn", 1);
 FCplusMinusBtn("fMinusBtn", -1);
-
-// const firstClassMinusBtn = document.getElementById("f-minus-btn");
-// firstClassMinusBtn.addEventListener("click", function () {
-//   const firstClassInputGet = document.getElementById("first-class-input").value;
-//   const currentInput = parseFloat(firstClassInputGet);
-//   const CurrentNumberUpdate = parseFloat(currentInput - 1);
-//   document.getElementById("first-class-input").value = CurrentNumberUpdate;
-// });
 
 function FCplusMinusBtn(id, plusMinus) {
   const firstClassPlusBtn = document.getElementById(id);
@@ -68,16 +52,17 @@ function calculation() {
   document.getElementById("total").innerText = taxCalculation + subCalculation;
 }
 
-// function bookNowFunction() {
+function bookNowFunction() {
+  const clickedBookNowBtn = document.getElementById("bookNowBtn");
+  //console.log(clickedBookNowBtn);
+  clickedBookNowBtn.addEventListener("click", function () {
+    document.querySelector(".booking-form").style.display = "none";
+    document.querySelector(".receive-form").style.display = "block";
+    const fairShow = document.getElementById("total").innerText;
+    //console.log(fairShow);
 
-// }
-const clickedBookNowBtn = document.getElementById("bookNowBtn");
-console.log(clickedBookNowBtn);
-clickedBookNowBtn.addEventListener("click", function () {
-  const firstClassInput = document.getElementById("first-class-input").value;
-  console.log(firstClassInput);
-  document.getElementById("first-input-show").innerText = firstClassInput;
-
-  document.querySelector(".booking-form").style.display = "none";
-  document.querySelector("#testH2").style.display = "block";
-});
+    document.getElementById("total-fair").innerText = fairShow;
+    //console.log(fairShow);
+  });
+}
+bookNowFunction();
